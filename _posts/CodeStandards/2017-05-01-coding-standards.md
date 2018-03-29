@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C++编程规范：组织和策略问题
-category: C++编程规范
+category: CPP编程规范
 tags: 编程规范
 Keywords: C++
 description:
