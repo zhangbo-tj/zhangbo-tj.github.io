@@ -13,7 +13,7 @@ description:
 3. 特点：单例类的构造函数时私有的，外部程序如果想要访问这个单例类的话，必须通过GetInstance()来请求得到这个单例类的实例
 
 ## 2. Singleton类
-``` c++
+```
 #include <iostream>
 using namespace std;
 
@@ -57,7 +57,7 @@ int main() {
 
 ## 3.多线程环境的Singleton类
 双重锁定（double lock）:避免两个线程重复创建实例的过程
-``` c++
+```
  //定义全局访问点，设置为静态方法，这样在外部无需实例化就可以调用该方法
     static Singleton *GetInstance() {
         //双重锁定，确保不会重复创建
