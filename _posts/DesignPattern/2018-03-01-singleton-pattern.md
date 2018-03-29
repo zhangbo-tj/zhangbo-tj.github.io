@@ -74,7 +74,7 @@ int main() {
 ## 4.懒汉单例模式
 懒汉模式，就是单例类的唯一实例是在第一次使用GetInstance()时实例化的。如果不调用GetInstance()的话，它自己是不会实例化的。
 懒汉模式是以时间换空间的方式
-``` c++
+```
  //定义全局访问点，设置为静态方法，这样在外部无需实例化就可以调用该方法
     static Singleton *GetInstance() {
         //双重锁定，确保不会重复创建
@@ -91,7 +91,7 @@ int main() {
 
 ## 5.饿汉单例模式
 饿汉模式：主动实例化单例类的唯一实例，是线程安装的。
-``` c++
+```
 class Singleton{
 private:
     static Singleton* instance;
@@ -111,7 +111,7 @@ public:
 Singleton *Singleton::instance = new Singleton();
 ```
 或者
-``` c++
+```
 class Singleton{
 private:
     static Singleton* instance;
