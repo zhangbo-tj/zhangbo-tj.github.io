@@ -1,6 +1,10 @@
 ### 我的博客
+地址：[https://zhangbo-tj.github.io](https://zhangbo-tj.github.io)
 
-地址：[http://yansu.org](http://yansu.org)
+### 博客模板
+这个博客通过[Jekyll](http://jekyllrb.com/)生成，部署在[Github](https://pages.github.com),主题基于[3-Jekyll](https://github.com/P233/3-Jekyll)修改生成，感谢3—Jekyll主题作者[Peiwen Lu](https://github.com/P233)。
+
+本博客通过Fork[闫肃的博客](http://yansu.org)之后修改个人配置文件后得到的，非常感谢[闫肃](http://yansu.org)，模板安装方法在下面列出（摘自闫肃的博客），欢迎各位讨论。
 
 ### 安装说明
 
