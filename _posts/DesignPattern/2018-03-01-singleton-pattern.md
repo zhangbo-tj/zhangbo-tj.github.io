@@ -13,7 +13,7 @@ description:
 3. 特点：单例类的构造函数时私有的，外部程序如果想要访问这个单例类的话，必须通过GetInstance()来请求得到这个单例类的实例
 
 ## 2. Singleton类
-```
+```cpp
 #include <iostream>
 using namespace std;
 
