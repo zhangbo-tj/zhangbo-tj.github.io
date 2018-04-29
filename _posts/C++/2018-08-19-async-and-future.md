@@ -8,7 +8,7 @@ description:
 ---
 ## 1. 为程序添加并行处理
 1. #include <future>
-2. 传递某些可并行执行的函数，交给std::async( )作为一个可地哦啊用对象
+2. 传递某些可并行执行的函数，交给std::async( )作为一个可调用对象
 3. 将执行结果赋值给一个fucture<ReturnType> object
 4. 当需要那个被启动函数的执行结果，或当你想确保该函数结束，就对future< >object调用get( )
 ``` c++
