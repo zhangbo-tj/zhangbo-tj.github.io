@@ -21,22 +21,22 @@ description:
     * 使用虚拟基类语义：语言规则要求构造函数最底层的派生类决定调用哪个基类构造函数
     * 使用工厂函数
 ``` c++
-    class B{
-    protected:
-        B(){/*...*/}
-        virtual void postInitizlize(){/*...*/}
+class B{
+protected:
+    B(){/*...*/}
+    virtual void postInitizlize(){/*...*/}
 
-    public:
-        template<class T>
-        static shared_ptr<T> create(){
-            shared_ptr<T> p(new T);
-            p->postInitizlize();
-            return p;
-        }
-    };
+public:
+    template<class T>
+    static shared_ptr<T> create(){
+        shared_ptr<T> p(new T);
+        p->postInitizlize();
+        return p;
+    }
+};
 
-    class D: public B{/*...*/};
-    shared_ptr<D> p = D::create<D>();
+class D: public B{/*...*/};
+shared_ptr<D> p = D::create<D>();
 ```
 ## 第50条：将基类析构函数设为公有且虚拟的，或者保护且非虚拟的
 1. 对于基类析构函数，要么允许通过基类指针虚拟地调用，要么完全不允许，不能选择非虚拟的调用。所以基类析构函数如果能够被调用（即是公用的），那么它就是虚拟的，否则就是非虚拟的。
