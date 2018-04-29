@@ -95,11 +95,13 @@ T& T::operator=(const T& rhs){
 }
 ```
 3. 当用户定义类型的对象有办法比野蛮赋值更高效地交换值时，应该在与用户自动以类型相同的名字空间中提供一个非成员交换函数。此外，还可以考虑为自己的非模板类特化std::swap
+``` c++
 namespace std{
     template<>
     void swap(MyType& lhs,MyType& rhs){
         lhs.swap(rhs);   //使用MyType::swap()
     }
 }
+```
 4. 例外情况：对于有值语义的类来说，交换是有用的。但是对于基类来说往往就没有很大用处了，因为总是在通过指针使用基类。
 
